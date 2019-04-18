@@ -21,7 +21,7 @@ public class IntegerInversion {
 //    注意:
 //
 //    假设我们的环境只能存储得下 32 位的有符号整数，则其数值范围为 [−231,  231 − 1]。请根据这个假设，如果反转后整数溢出那么就返回 0。
-    @Practice(name = "整数反转",url = "")
+    @Practice(name = "整数反转",url = "https://leetcode-cn.com/problems/reverse-integer/")
     public static int reverse(int x) {
 
         if (x < 10 && x > -10) {

@@ -9,7 +9,7 @@ public class ToLowerCase {
      * @param str
      * @return
      */
-    @Practice(name = "大写转小写",url = "")
+    @Practice(name = "转换成小写字母",url = "https://leetcode-cn.com/problems/to-lower-case/")
     public static String toLowerCase(String str) {
         char[] chars = str.toCharArray();
         for (int i=0; i< chars.length;i++) {
