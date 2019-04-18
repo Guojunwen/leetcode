@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>leetCode练习</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+<body>
+<div class="container">
+    <ul id="list" class="list-group">
+    </ul>
+</div>
+</body>
+<script src="js/jquery.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script>
+    $(function () {
+        $.ajax({
+            type: "POST",
+            url: "/findAllPractice",
+            success: function (result) {
+                var practices = result.result;
+                var html = "";
+                for (var i = 0; i < practices.length; i++) {
+                    html += "<li class=\"list-group-item\">";
+                    if (practices[i].url!=null){
+                        html+="<a href='"+practices[i].url+"'>"
+                    }
+                    html += practices[i].name;
+                    if (practices[i].url!=null){
+                        html+="</a>"
+                    }
+                    html += "</li>"
+                }
+                $('#list').html(html)
+            }
+        })
+    })
+
+</script>
+</html>
